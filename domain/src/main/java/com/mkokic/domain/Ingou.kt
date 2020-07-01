@@ -1,8 +1,9 @@
 package com.mkokic.domain
 
-public class Ingou(
+data class Ingou(
     val idIngou: Int,
-    val name: String
+    val name: String,
+    val description: String
 )
 
 

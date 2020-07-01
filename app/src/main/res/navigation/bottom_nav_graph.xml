@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/ingouListFragment">
+
+    <fragment
+        android:id="@+id/ingouListFragment"
+        android:name="com.mkokic.ingou.ingou.IngouListFragment"
+        android:label="IngouListFragment" />
+    <fragment
+        android:id="@+id/addIngouTextFragment"
+        android:name="com.mkokic.ingou.add_ingou.AddIngouTextFragment"
+        android:label="AddIngouTextFragment" />
+</navigation>

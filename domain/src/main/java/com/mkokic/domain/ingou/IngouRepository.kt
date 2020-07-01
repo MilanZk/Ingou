@@ -1,15 +1,17 @@
 package com.mkokic.domain.ingou
 
 import com.mkokic.domain.Ingou
-import kotlinx.coroutines.flow.Flow
+import io.reactivex.Completable
+import io.reactivex.Observable
+import io.reactivex.Single
 
 interface IngouRepository {
 
-    fun getAllIngous(): Flow<List<Ingou>>
-/*
-    fun insertIngou()
+    fun getAllIngous(): Observable<List<Ingou>>
 
-    fun updateIngou()
+    fun insertIngou(ingou: Ingou): Observable<Ingou>
 
-    fun deleteIngou()*/
+    /* fun updateIngou()
+
+     fun deleteIngou()*/
 }

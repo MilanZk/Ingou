@@ -4,6 +4,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Update
+import io.reactivex.Completable
 
 interface BaseDao<T> {
 
@@ -13,7 +14,7 @@ interface BaseDao<T> {
      * @param type the object to be inserted.
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertar(type: T)
+    fun insert(type: T): Completable
 
     /**
      * Insert an array of objects in the database.
@@ -21,7 +22,7 @@ interface BaseDao<T> {
      * @param type the objects to be inserted.
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertar(vararg type: T)
+    fun insert(vararg type: T): Completable
 
     /**
      * Update an object from the database.
@@ -29,7 +30,7 @@ interface BaseDao<T> {
      * @param type the object to be updated
      */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun actualizar(type: T)
+    fun update(type: T)
 
     /**
      * Delete an object from the database
@@ -37,5 +38,5 @@ interface BaseDao<T> {
      * @param type the object to be deleted
      */
     @Delete
-    fun borrar(type: T)
+    fun delete(type: T)
 }

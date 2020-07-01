@@ -1,4 +1,4 @@
-package com.mkokic.data.ingou
+package com.mkokic.data.ingou.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -7,5 +7,6 @@ import androidx.room.PrimaryKey
 data class IngouDbModel(
     @PrimaryKey
     val idIngou: Int,
-    val name: String
+    val name: String,
+    val description: String
 )
